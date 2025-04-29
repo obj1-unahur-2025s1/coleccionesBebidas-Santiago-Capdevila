@@ -28,5 +28,5 @@ describe "test de tito" {
         tito.consumir(5, cianuro)
         assert.equals(0,tito.velocidad())
     }
-
+    
 }
