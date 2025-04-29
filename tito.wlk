@@ -1,3 +1,5 @@
+import frutas.*
+
 object tito {
     var cantidad = 0
     var bebida = cianuro
@@ -30,14 +32,18 @@ object terere {
 }
 
 object licuadoDeFrutas {
-    const ingredientes = []
+    var ingredientes = []
 
     method rendimiento(cantidad) {
-        return ingredientes.sum({ingrediente => ingrediente.cantidadNutrientes()}) * cantidad
+        return ingredientes.sum({ingrediente => ingrediente.nutrientes()}) * (cantidad / 1000)
     }
 
-    method agregarIngrediente(unosIngredientes) {
-        ingredientes + unosIngredientes
+    method agregarIngredientes(unosIngredientes) {
+        ingredientes = ingredientes + unosIngredientes
+    }
+
+    method ingrediente() {
+        return ingredientes
     }
 }
 

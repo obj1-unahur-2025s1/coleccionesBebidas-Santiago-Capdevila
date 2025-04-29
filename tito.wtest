@@ -1,3 +1,4 @@
+import frutas.*
 import tito.*
 
 describe "test de tito" {
@@ -28,5 +29,12 @@ describe "test de tito" {
         tito.consumir(5, cianuro)
         assert.equals(0,tito.velocidad())
     }
+    
+    test "si tito consume un litro de licuado con manzana, banana y frutlla su velocidad es de 168" {
+      licuadoDeFrutas.agregarIngredientes([manzana, banana, frutilla])
+      tito.consumir(1000, licuadoDeFrutas)
+      assert.equals(168 , tito.velocidad())
+    }
+
     
 }
